@@ -38,10 +38,14 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
-        <!-- 工程模块依赖-->
+        <!-- 工程模块-->
         <dependency>
             <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-types</artifactId>
+            <artifactId>big-marketing-wheel-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.myphoenix</groupId>
+            <artifactId>big-marketing-wheel-trigger</artifactId>
         </dependency>
     </dependencies>
 

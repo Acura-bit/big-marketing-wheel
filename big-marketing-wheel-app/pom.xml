@@ -79,14 +79,10 @@
             <version>2.9.0</version>
         </dependency>
 
-        <!-- 工程模块依赖-->
+        <!-- 工程模块-->
         <dependency>
             <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-trigger</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-infrastructure</artifactId>
+            <artifactId>big-marketing-wheel-types</artifactId>
         </dependency>
     </dependencies>
 

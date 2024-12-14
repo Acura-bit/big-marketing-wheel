@@ -27,21 +27,6 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
 
-        <!-- 工程模块依赖-->
-        <dependency>
-            <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-types</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-domain</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
     <build>

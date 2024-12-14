@@ -18,11 +18,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <!-- 工程模块依赖-->
-        <dependency>
-            <groupId>cn.myphoenix</groupId>
-            <artifactId>big-marketing-wheel-domain</artifactId>
-        </dependency>
+
     </dependencies>
 
     <build>
