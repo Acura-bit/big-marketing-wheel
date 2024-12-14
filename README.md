@@ -4,7 +4,7 @@
 
 项目构建指的是将源代码和资源文件转换为**可执行或可分发的软件制品**（如 JAR、WAR 文件）的过程。这个过程不仅包括编译代码，还包括运行测试、打包、部署等步骤。Maven 提供了一套标准化的方法来处理这些任务，使得构建过程更加自动化和可重复。如下图所示：
 
-![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=ODM3NTdlYzAwYmU0YThkM2NlZThiOWMzYWQ4YWZkZTRfZmw3QUNEb3hNMHJmOU1YZVVkRzZLaWhXTE9LTXNVcnBfVG9rZW46TXFjNmJSdm5zb2tFQW94YUZxc2NtQktSbmpoXzE3MzQxNjI1NzI6MTczNDE2NjE3Ml9WNA)
+![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=MTkxZWQ0YmFkODZjZDBiNTY5ZTc0MTQ5NTVmODgwNWRfSnNvRlVqZVRLMVpLbGNwc2JyT3BXWlEyaXVmTm9PVHNfVG9rZW46TXFjNmJSdm5zb2tFQW94YUZxc2NtQktSbmpoXzE3MzQxNjgyMDM6MTczNDE3MTgwM19WNA)
 
 构建过程的几个主要环节：
 
@@ -26,19 +26,19 @@
 
 **让我们来梳理一下托马斯这一天中的工作内容**：
 
-![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=OWI3ODRmNjAyMTk2Yzc3MzA2NWU1ZjQzMDA4MWViMjhfUzBOWFJTSUQ0VnFwMGhNYzhLc3J1dW9SM0xUZE04YUFfVG9rZW46SHJXdGJpd01Bb3BCY054RGNEaGNoY2lDblBlXzE3MzQxNjI1NzI6MTczNDE2NjE3Ml9WNA)
+![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=MDA5NjNiY2QyODc0ODgyYmFiOGNjOTY1MDE3NzhlYjRfd0s4RDNFTmJOVmxweXZmVUt6Y3E2YU82b3VYTHJqQnRfVG9rZW46SHJXdGJpd01Bb3BCY054RGNEaGNoY2lDblBlXzE3MzQxNjgyMDM6MTczNDE3MTgwM19WNA)
 
 从中我们发现，托马斯的很大一部分时间花在了"编译、打包、部署、测试"这些流程化的工作上面，而真正需要由"人"的智慧实现的分析问题和编码却只占了很少一部分。
 
-![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=OTFkZTI2NDIwOGQyYWE1ODQzYjU0MjcxNTJjNTk2OGNfR0ZqV3BEMVI1SW52SndIbUNCZW0ycDYxbDVMUmZxRGtfVG9rZW46VDVvdGJEZTRzb0twdjV4bjM0cWN4cEhSbjJjXzE3MzQxNjI1NzI6MTczNDE2NjE3Ml9WNA)
+![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=MTZjOGYyNDkwZTk4OGZjY2FjZTFhYTkyODgzZjQ5YmFfNkNIZFVEb0kxR3NKNGU3RjQ1QmxCcnZDNW9vY296enZfVG9rZW46VDVvdGJEZTRzb0twdjV4bjM0cWN4cEhSbjJjXzE3MzQxNjgyMDM6MTczNDE3MTgwM19WNA)
 
 能否将这些程式化的工作交给机器自动完成呢？——当然可以！这就是自动化构建。
 
-![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=YTgyYjBmODdkNGU3MGI1MjM0NTIxNDYwZThhNjQ5MTFfZkc4cmprMk4zamhOa3lEb25jTXJIMzBld2hDeEVMa25fVG9rZW46QkRERWJKckpUbzNEQXR4ajc5TGNBNWhVbjZnXzE3MzQxNjI1NzI6MTczNDE2NjE3Ml9WNA)
+![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=YzdmNjU1MGI2YmMzY2JhM2RkZTgwYWNjOGI0NjEyZGRfUGdGV0JkbHd0VDlDSldhaDZyZEZPYlFCZU96bkJ4RkJfVG9rZW46QkRERWJKckpUbzNEQXR4ajc5TGNBNWhVbjZnXzE3MzQxNjgyMDM6MTczNDE3MTgwM19WNA)
 
 此时 Maven 的意义就体现出来了，它可以自动的从构建过程的起点一直执行到终点，也就是一键式构建：
 
-![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=MWM2ZDNhODgyOWUyYTU2NzRiODY2ODk1NWI4OTg0MmZfWU04Wlc0QjdJYklrZlNCTG1VUnl5ZVRMQmFNSTZ1cEhfVG9rZW46TDI2VWIwQXRzb2tBdlF4YkV1WmMwbFpQbjFkXzE3MzQxNjI1NzI6MTczNDE2NjE3Ml9WNA)
+![img](https://tw9tzjv8tr6.feishu.cn/space/api/box/stream/download/asynccode/?code=MTk2MDUwMmY1NGI3ZjgzYWRhZDk0MGE4NzcxOGE1YWRfczcwNXRQeTM5QjB3cDNxblhsR1dpaTVEdzZWbmJLYldfVG9rZW46TDI2VWIwQXRzb2tBdlF4YkV1WmMwbFpQbjFkXzE3MzQxNjgyMDM6MTczNDE3MTgwM19WNA)
 
 # 反应堆机制（Reactor Mechanism）
 
